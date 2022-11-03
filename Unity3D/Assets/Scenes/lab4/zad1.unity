@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 283433112}
   - component: {fileID: 283433111}
   - component: {fileID: 283433110}
-  - component: {fileID: 283433115}
   m_Layer: 0
   m_Name: Block
   m_TagString: Untagged
@@ -231,27 +230,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283433109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 2.94, z: 0}
+  m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &283433115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283433109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b72dcd81363ad1e41956598a086c3f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 3
-  block: {fileID: 283433109}
 --- !u!1 &535119758
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +249,7 @@ GameObject:
   - component: {fileID: 535119761}
   - component: {fileID: 535119760}
   - component: {fileID: 535119759}
+  - component: {fileID: 535119763}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -344,12 +330,32 @@ Transform:
   m_GameObject: {fileID: 535119758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 50, y: 1, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &535119763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535119758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4daa21a93e43b5643b36599fc1645a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 3
+  iloscKostek: 10
+  kolor1: {fileID: 2100000, guid: e2b195fb73a4c7e4696dc191a862d197, type: 2}
+  kolor2: {fileID: 2100000, guid: 348b9c02016dbb34d928e8216809b3a0, type: 2}
+  kolor3: {fileID: 2100000, guid: 51b67bbd829daf347a79880e2e4fbe40, type: 2}
+  kolor4: {fileID: 2100000, guid: 2728d6fa365a34443a1756f7ccc8e671, type: 2}
+  kolor5: {fileID: 2100000, guid: 2b26dacd009bf1640a61977a4ed05c72, type: 2}
+  block: {fileID: 283433109}
 --- !u!1 &1755351310
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,8 +432,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1755351310}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.279717, y: 0.0023023374, z: -0.00067198434, w: 0.96007955}
+  m_LocalPosition: {x: 12.176574, y: 246.4239, z: -393.7743}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
