@@ -4,25 +4,38 @@ using UnityEngine;
 
 public class zadanie6_3 : MonoBehaviour
 {
-    public Transform navigationStartPoint;
-    public Transform navigationEndPoint;
-
-    private Vector3 startPoint;
-    private Vector3 endPoint;
-    public float speed;
-
-    private Vector3 currentPlatformPosition;
-    // Start is called before the first frame update
+    private float speed = 10f;
+    public Transform[] points;
+    private int i = 0;
+    private bool reverse = false;
     void Start()
     {
-        startPoint = navigationStartPoint.position;
-        endPoint = navigationEndPoint.position;
+        transform.position = points[0].position;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        currentPlatformPosition = Vector3.Lerp(startPoint, endPoint, Mathf.PingPong(Time.time * speed, 1));
-        transform.position = currentPlatformPosition;
+        Debug.Log(i);
+        if (Vector3.Distance(transform.position, points[i].position) < 0.2f)
+        {
+            if (reverse)
+            {
+                i--;
+                if (i < 0)
+                {
+                    i = 0;
+                    reverse = false;
+                }
+            }
+            else
+            {
+                i++;
+                if (i == points.Length)
+                {
+                    i = points.Length - 1;
+                    reverse = true;
+                }
+            }
+        }
+        transform.position = Vector3.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
     }
 }
